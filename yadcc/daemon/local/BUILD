@@ -218,7 +218,11 @@ cc_test(
     '//yadcc/api:daemon_proto_flare',
     '//yadcc/api:scheduler_proto_flare',
     '//yadcc/daemon:task_digest',
-  ]
+  ],
+  extra_cppflags = [
+    '-Wno-array-bounds',
+    '-Wno-stringop-overread',
+  ],
 )
 
 cc_library(
